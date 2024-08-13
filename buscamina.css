@@ -1,0 +1,157 @@
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #e0e0e0;
+    background-image: url('https://images.pexels.com/photos/333850/pexels-photo-333850.jpeg');
+    background-size: cover;
+}
+
+.container {
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.creator {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.game-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
+}
+
+.info-item {
+    font-size: 16px;
+    background-color: #e9ecef;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid #ccc;
+    transition: transform 0.2s ease;
+    margin-bottom: 10px;
+}
+
+.info-item:hover {
+    transform: scale(1.05);
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-bottom: 10px;
+}
+
+#restartButton {
+    background-color: #007bff;
+    color: white;
+}
+
+#pauseButton {
+    background-color: #ffc107;
+    color: #495057;
+}
+
+#resumeButton {
+    background-color: #28a745;
+    color: white;
+}
+
+#resetButton {
+    background-color: #dc3545;
+    color: white;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+.game-container {
+    display: flex;
+    justify-content: center;
+}
+
+#minefield {
+    display: grid;
+    grid-template-columns: repeat(10, 30px);
+    grid-template-rows: repeat(10, 30px);
+    gap: 2px;
+}
+
+.cell {
+    width: 30px;
+    height: 30px;
+    background-color: #6c757d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    cursor: pointer;
+    border: 2px solid #495057;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.cell:hover {
+    transform: scale(1.1);
+}
+
+.cell.revealed {
+    background-color: #adb5bd;
+    cursor: default;
+}
+
+.cell.mine {
+    background-color: #dc3545;
+    color: white;
+}
+
+.cell.flagged {
+    background-color: #ffc107;
+    color: #495057;
+}
+
+.cell.empty {
+    background-color: #f8f9fa;
+}
+
+.info-item.mine {
+    color: #dc3545;
+}
+
+.info-item.win {
+    color: #28a745;
+}
+
+.info-item.smile {
+    color: #007bff;
+}

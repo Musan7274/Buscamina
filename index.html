@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscaminas</title>
+    <link rel="stylesheet" href="buscamina.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Buscaminas</h1>
+        <div class="creator">Creador: venomus_</div>
+        <div class="game-wrapper">
+            <div class="info">
+                <div class="info-item" id="minesLeftContainer">
+                    <span id="minesLeft">🕳️ Minas restantes: 20</span>
+                </div>
+                <div class="info-item" id="timerContainer">
+                    <span id="timer">⏱️ Tiempo: 0 s</span>
+                </div>
+                <div class="info-item" id="scoreContainer">
+                    <span id="score">🏆 Puntaje: 0</span>
+                </div>
+                <div class="controls">
+                    <button id="restartButton">🔄 Reiniciar Juego</button>
+                    <button id="pauseButton">⏸️ Pausar</button>
+                    <button id="resumeButton">▶️ Reanudar</button>
+                    <button id="resetButton">🔄 Reiniciar Puntaje</button>
+                </div>
+            </div>
+            <div class="game-container">
+                <div id="minefield"></div>
+            </div>
+        </div>
+    </div>
+    <script src="buscamina.js"></script>
+</body>
+</html>
